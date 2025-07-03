@@ -1,0 +1,7 @@
+jobs:
+  - name: build
+    run: npm install && npm run build
+  - name: test
+    run: npm test -- --watchAll=false
+  - name: deploy
+    run: cp -r build/* /tmp/deployments/my-react-demo/
