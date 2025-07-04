@@ -1,6 +1,7 @@
+image: node:20
+
 jobs:
-  build:
-    image: node:20
+  - name: build
     steps:
       - name: Install dependencies
         run: npm ci
