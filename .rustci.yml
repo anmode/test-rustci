@@ -1,16 +1,19 @@
-image: node:20
-
 jobs:
+  - name: install
+    run: npm ci
+    image: node:20
+
+  - name: lint
+    run: npm run lint
+    image: node:20
+
+  - name: test
+    run: npm test -- --watchAll=false
+    image: node:20
+
   - name: build
-    steps:
-      - name: Install dependencies
-        run: npm ci
-      - name: Lint
-        run: npm run lint
-      - name: Test
-        run: npm test -- --watchAll=false
-      - name: Build
-        run: npm run build
+    run: npm run build
+    image: node:20
     artifacts:
       - build/**
       - coverage/**
