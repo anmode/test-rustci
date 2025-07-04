@@ -1,24 +1,15 @@
-image: node:20
-
-name: React CI
-
-stages:
-  - name: install
-    commands:
-      - npm ci
-
-  - name: lint
-    commands:
-      - npm run lint
-
-  - name: test
-    commands:
-      - npm test -- --watchAll=false
-
-  - name: build
-    commands:
-      - npm run build
-
-artifacts:
-  - build/**
-  - coverage/**
+jobs:
+  build:
+    image: node:20
+    steps:
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm test -- --watchAll=false
+      - name: Build
+        run: npm run build
+    artifacts:
+      - build/**
+      - coverage/**
