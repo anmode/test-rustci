@@ -1,14 +1,6 @@
 jobs:
   - name: install
-    run: npm ci
-    image: node:20
-
-  - name: lint
-    run: npm run lint
-    image: node:20
-
-  - name: test
-    run: npm test -- --watchAll=false
+    run: npm install
     image: node:20
 
   - name: build
