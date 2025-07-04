@@ -1,7 +1,24 @@
-jobs:
-  - name: build
-    run: npm install && npm run build
+image: node:20
+
+name: React CI
+
+stages:
+  - name: install
+    commands:
+      - npm ci
+
+  - name: lint
+    commands:
+      - npm run lint
+
   - name: test
-    run: npm test -- --watchAll=false
-  - name: deploy
-    run: cp -r build/* /tmp/deployments/my-react-demo/
+    commands:
+      - npm test -- --watchAll=false
+
+  - name: build
+    commands:
+      - npm run build
+
+artifacts:
+  - build/**
+  - coverage/**
