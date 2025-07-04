@@ -4,7 +4,9 @@ jobs:
     image: node:20
 
   - name: build
-    run: npm run build
+    run: |
+      npm install
+      npm run build
     image: node:20
     artifacts:
       - build/**
