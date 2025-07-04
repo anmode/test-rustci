@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn no
+          Learn no0
         </a>
       </header>
     </div>
