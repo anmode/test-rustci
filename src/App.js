@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Leaaaa
+          Learn repos
         </a>
       </header>
     </div>
