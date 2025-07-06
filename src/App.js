@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn sddfdf
+          Learn sddf
         </a>
       </header>
     </div>
